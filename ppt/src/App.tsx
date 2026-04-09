@@ -16,7 +16,6 @@ import S05NotebookLM   from './slides/S05NotebookLM'
 import S06Cursor       from './slides/S06Cursor'
 import S07ClaudeCode   from './slides/S07ClaudeCode'
 import S08OpenClaw     from './slides/S08OpenClaw'
-import S09PainPoints   from './slides/S09PainPoints'
 import S10Requirements from './slides/S10Requirements'
 import S11Design       from './slides/S11Design'
 import S12Coding       from './slides/S12Coding'
@@ -60,7 +59,6 @@ export default function App() {
         <S06Cursor />
         <S07ClaudeCode />
         <S08OpenClaw />
-        <S09PainPoints />
         <S10Requirements />
         <S11Design />
         <S12Coding />

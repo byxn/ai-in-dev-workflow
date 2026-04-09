@@ -2,53 +2,171 @@
   align-items: center !important;
   justify-content: center !important;
   text-align: center;
-  background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(0,212,170,0.07) 0%, transparent 70%),
-              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(139,92,246,0.06) 0%, transparent 60%);
+  background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(239,68,68,0.04) 0%, transparent 70%);
 }
 
 .title {
-  font-size: 56px !important;
+  font-size: 38px !important;
   font-weight: 900 !important;
-  line-height: 1.05;
   background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 44px !important;
-  letter-spacing: -1px;
+  margin-bottom: 4px !important;
+  letter-spacing: -0.5px;
 }
 
-.words {
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* ── Pipeline ──────────────────────────── */
+.pipeline {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+  margin-bottom: 0;
+}
+
+.pipelineCol {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.stepBox {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 14px 8px;
 }
 
-.row {
+.stepBoxHi {
+  border-color: rgba(239,68,68,0.45);
+  background: rgba(239,68,68,0.05);
+}
+
+.stepIcon { font-size: 22px; }
+
+.stepLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(226,232,240,0.7);
+}
+
+.arrow {
+  font-size: 16px;
+  color: rgba(100,116,139,0.35);
+  padding: 0 5px;
+  flex-shrink: 0;
+  margin-bottom: 6px;
+}
+
+/* ── 古法编程 label row ─────────────────── */
+.labelRow {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 22px;
-  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.word { font-weight: 900; line-height: 1.1; }
-.xl { font-size: 54px; letter-spacing: -1.5px; }
-.lg { font-size: 40px; letter-spacing: -0.5px; }
-.md { font-size: 28px; }
-.sm { font-size: 20px; font-weight: 600; }
+.labelSlot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 44px;
+}
 
-.accent { color: #00d4aa; text-shadow: 0 0 40px rgba(0,212,170,0.35); }
-.purple { color: #8b5cf6; text-shadow: 0 0 40px rgba(139,92,246,0.35); }
-.amber  { color: #f59e0b; text-shadow: 0 0 40px rgba(245,158,11,0.25); }
-.white  { color: rgba(226,232,240,0.9); }
-.dim    { color: rgba(226,232,240,0.45); }
-.muted  { color: #64748b; }
+.labelText {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ef4444;
+  text-decoration: line-through;
+  text-decoration-color: rgba(239,68,68,0.5);
+  text-decoration-thickness: 2px;
+  text-shadow: 0 0 30px rgba(239,68,68,0.4);
+  line-height: 1;
+}
 
-.dot { color: rgba(255,255,255,0.12); font-size: 0.5em; align-self: center; }
+.labelArrow {
+  font-size: 14px;
+  color: rgba(239,68,68,0.5);
+  margin-top: 2px;
+}
 
-.closing { margin-top: 44px; }
-.closingLabel { font-size: 13px; color: #64748b; letter-spacing: 2px; margin-bottom: 12px; }
-.closingQ { font-size: 28px; font-weight: 800; color: #e2e8f0; }
-.closingSub { font-size: 14px; color: #64748b; margin-top: 10px; }
+/* ── Pain slots ─────────────────────────── */
+.painRow {
+  display: flex;
+  width: 100%;
+}
+
+.painSlot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.painConnector {
+  width: 1px;
+  height: 14px;
+  background: rgba(239,68,68,0.3);
+}
+
+.painBox {
+  width: 100%;
+  height: 68px;
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.painQ {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.12);
+}
+
+.painBoxFilled {
+  width: 100%;
+  border: 1px solid rgba(239,68,68,0.4);
+  border-radius: 8px;
+  background: rgba(239,68,68,0.06);
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.painTag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #f87171;
+  background: rgba(239,68,68,0.1);
+  border-radius: 4px;
+  padding: 2px 6px;
+  text-align: center;
+}
+
+/* ── hook ───────────────────────────────── */
+.hook {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #64748b;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 12px;
+  width: 100%;
+  text-align: center;
+}
+.hook strong { color: #00d4aa; }

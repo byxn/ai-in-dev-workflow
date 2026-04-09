@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Local tooling
+.claude/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+**/dist/
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+presentation-script.md

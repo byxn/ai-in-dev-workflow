@@ -4,8 +4,8 @@ This repository contains an internal presentation project about AI-assisted soft
 
 It includes:
 
-- a presentation script in [`presentation-script.md`](/Users/andorer/Desktop/projects/AIGC/speak/presentation-script.md)
-- a slide deck implemented with React, TypeScript, Vite, and Reveal.js in [`ppt/`](/Users/andorer/Desktop/projects/AIGC/speak/ppt)
+- a presentation script in [`presentation-script.md`](./presentation-script.md)
+- a slide deck implemented with React, TypeScript, Vite, and Reveal.js in [`ppt/`](./ppt)
 
 ## Structure
 

@@ -37,11 +37,18 @@
 }
 
 .slogan {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   background: linear-gradient(135deg, var(--accent), var(--purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-bottom: 24px;
+}
+
+.footer {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 1px;
 }

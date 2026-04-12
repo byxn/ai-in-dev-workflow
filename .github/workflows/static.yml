@@ -1,4 +1,4 @@
-name: Deploy PPT to GitHub Pages
+name: Deploy Slides to GitHub Pages
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: lts/*
           cache: npm
-          cache-dependency-path: ppt/package-lock.json
+          cache-dependency-path: slides/package-lock.json
 
       - name: Install dependencies
         working-directory: ppt
@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ppt/dist
+          path: slides/dist
 
   deploy:
     needs: build

@@ -6,17 +6,16 @@ export default function S21Closing() {
       <div className={styles.inner}>
         <p className={styles.label}>结语</p>
         <p className={`${styles.quote} fragment`}>
-          AI 工具不会让开发者失业，<br />
-          但<span style={{ color: 'var(--accent)' }}>不用 AI 工具的开发者</span><br />
-          会被<strong>用 AI 工具的开发者</strong>取代。
+          未来不是「会不会写代码」，<br />
+          而是「<span style={{ color: 'var(--accent)' }}>能不能让 AI 写出对的代码</span>」
         </p>
         <p className={`${styles.sub} fragment`}>
-          现在最好的投资，是花两周时间<strong>真正用起来</strong><br />
-          不是试用，而是用它完成一个<strong>实际任务</strong>。
+          现在开始行动，不是下一个季度。
         </p>
         <p className={`${styles.slogan} fragment`}>
-          Start small, think big, move fast.
+          立即安装 Cursor，今天就开始！
         </p>
+        <p className={`${styles.footer} fragment`}>感谢大家 · Q&amp;A</p>
       </div>
     </section>
   )

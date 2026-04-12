@@ -1,0 +1,32 @@
+.slide {
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.num {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, rgba(0,212,170,0.15) 0%, rgba(0,212,170,0.05) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -4px;
+  margin-bottom: -8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  font-size: 52px !important;
+  font-weight: 800 !important;
+  color: var(--text) !important;
+  margin: 0 0 16px 0 !important;
+  letter-spacing: -1px;
+}
+
+.desc {
+  font-size: 16px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}

@@ -13,7 +13,7 @@ export default function S21Closing() {
           现在开始行动，不是下一个季度。
         </p>
         <p className={`${styles.slogan} fragment`}>
-          立即安装 Cursor，今天就开始！
+          立即安装 Claude Code，今天就开始！
         </p>
         <p className={`${styles.footer} fragment`}>感谢大家 · Q&amp;A</p>
       </div>

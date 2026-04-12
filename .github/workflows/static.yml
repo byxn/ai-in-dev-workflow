@@ -33,11 +33,11 @@ jobs:
           cache-dependency-path: slides/package-lock.json
 
       - name: Install dependencies
-        working-directory: ppt
+        working-directory: slides
         run: npm ci
 
       - name: Build
-        working-directory: ppt
+        working-directory: slides
         run: npm run build
 
       - name: Setup Pages

@@ -58,7 +58,7 @@ export default function S07Tools() {
     <section>
       <SlideHeader tag="01 · 现状速览" title={<>主流 AI 编程工具 <span className="dim">— 现在该用什么</span></>} />
       <div className="fragment">
-        <table className="dt" style={{ fontSize: 14 }}>
+        <table className="dt text-sm">
           <thead>
             <tr>
               <th>工具</th>
@@ -70,23 +70,25 @@ export default function S07Tools() {
           </thead>
           <tbody>
             {tools.map((t) => (
-              <tr key={t.name} style={{ opacity: t.dim ? 0.5 : 1 }}>
+              <tr key={t.name} className={t.dim ? 'opacity-50' : ''}>
                 <td><strong>{t.name}</strong></td>
-                <td style={{ color: 'var(--muted)' }}>{t.vendor}</td>
+                <td className="text-muted">{t.vendor}</td>
                 <td>{t.scene}</td>
-                <td style={{ color: 'var(--muted)', fontSize: 12 }}>{t.type}</td>
+                <td className="text-muted text-xs">{t.type}</td>
                 <td>
-                  <span style={{
-                    fontSize: 11, fontWeight: 700, padding: '3px 9px', borderRadius: 4,
-                    color: t.recColor, background: t.recBg,
-                  }}>{t.rec}</span>
+                  <span
+                    className="text-[11px] font-bold px-[9px] py-[3px] rounded"
+                    style={{ color: t.recColor, background: t.recBg }}
+                  >
+                    {t.rec}
+                  </span>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <div className="fragment hbox" style={{ marginTop: 16 }}>
+      <div className="fragment hbox mt-4">
         <div className="hbox-title">策略</div>
         <div className="hbox-body">衔接四阶段演进 — <strong>优先采用阶段 3 / 4 的工具</strong>。Copilot 已是行业基线，不再是差异点。</div>
       </div>

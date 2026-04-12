@@ -8,22 +8,14 @@ export default function S09Paradigm() {
     <section>
       <SlideHeader tag="02 · 范式变化" title={<>开发范式：<span className="hi">旧世界</span> vs <span className="hi">新世界</span></>} />
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 48px 1fr', gap: 0, alignItems: 'stretch', marginTop: 8 }}>
+      <div className="grid grid-cols-[1fr_48px_1fr] items-stretch mt-2">
         {/* old world */}
         <div className="fragment">
-          <div style={{
-            fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase',
-            color: '#ef4444', marginBottom: 12, textAlign: 'center',
-          }}>旧世界</div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <div className="text-[11px] font-bold tracking-[2px] uppercase text-red-500 mb-3 text-center">旧世界</div>
+          <div className="flex flex-col gap-2">
             {oldSteps.map((s, i) => (
-              <div key={i} style={{
-                background: 'var(--panel)', border: '1px solid var(--border)',
-                borderRadius: 8, padding: '10px 16px',
-                fontSize: 14, color: 'var(--muted)',
-                display: 'flex', alignItems: 'center', gap: 10,
-              }}>
-                <span style={{ color: '#ef4444', opacity: 0.5, fontSize: 10 }}>●</span>
+              <div key={i} className="flex items-center gap-[10px] bg-panel border border-[var(--border)] rounded-lg px-4 py-[10px] text-sm text-muted">
+                <span className="text-[10px] text-red-500/50">●</span>
                 {s}
               </div>
             ))}
@@ -31,27 +23,19 @@ export default function S09Paradigm() {
         </div>
 
         {/* middle arrows */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18, paddingTop: 38 }}>
-          {['→', '→', '→', '→', '→', '→'].map((a, i) => (
-            <div key={i} style={{ color: 'rgba(0,212,170,0.3)', fontSize: 14 }}>{a}</div>
+        <div className="flex flex-col items-center justify-center gap-[18px] pt-[38px]">
+          {Array(6).fill('→').map((a, i) => (
+            <div key={i} className="text-sm text-accent/30">{a}</div>
           ))}
         </div>
 
         {/* new world */}
         <div className="fragment">
-          <div style={{
-            fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase',
-            color: 'var(--accent)', marginBottom: 12, textAlign: 'center',
-          }}>新世界</div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <div className="text-[11px] font-bold tracking-[2px] uppercase text-accent mb-3 text-center">新世界</div>
+          <div className="flex flex-col gap-2">
             {newSteps.map((s, i) => (
-              <div key={i} style={{
-                background: 'rgba(0,212,170,0.04)', border: '1px solid rgba(0,212,170,0.2)',
-                borderRadius: 8, padding: '10px 16px',
-                fontSize: 14, color: 'var(--text)',
-                display: 'flex', alignItems: 'center', gap: 10,
-              }}>
-                <span style={{ color: 'var(--accent)', fontSize: 10 }}>●</span>
+              <div key={i} className="flex items-center gap-[10px] bg-accent/[0.04] border border-accent/20 rounded-lg px-4 py-[10px] text-sm text-fg">
+                <span className="text-[10px] text-accent">●</span>
                 {s}
               </div>
             ))}

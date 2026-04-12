@@ -55,26 +55,25 @@ export default function S12Tech() {
   return (
     <section>
       <SlideHeader tag="03 · 最前沿技术" title={<><span className="hi">2025</span> 最前沿技术</>} />
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
+      <div className="grid grid-cols-3 gap-[14px]">
         {techs.map((t, i) => (
-          <div key={i} className="fragment" style={{
-            background: t.colorBg,
-            border: `1px solid ${t.colorBorder}`,
-            borderRadius: 10,
-            padding: '14px 18px',
-            display: 'flex',
-            gap: 12,
-            alignItems: 'flex-start',
-          }}>
-            <div style={{
-              width: 36, height: 36, borderRadius: 8, flexShrink: 0,
-              background: `color-mix(in srgb, ${t.color} 12%, transparent)`,
-              border: `1px solid color-mix(in srgb, ${t.color} 25%, transparent)`,
-              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 17,
-            }}>{t.icon}</div>
+          <div
+            key={i}
+            className="fragment flex items-start gap-3 rounded-[10px] px-[18px] py-[14px] border"
+            style={{ background: t.colorBg, borderColor: t.colorBorder }}
+          >
+            <div
+              className="w-9 h-9 rounded-lg shrink-0 flex items-center justify-center text-[17px] border"
+              style={{
+                background: `color-mix(in srgb, ${t.color} 12%, transparent)`,
+                borderColor: `color-mix(in srgb, ${t.color} 25%, transparent)`,
+              }}
+            >
+              {t.icon}
+            </div>
             <div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: t.color, marginBottom: 4 }}>{t.name}</div>
-              <div style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6 }}>{t.desc}</div>
+              <div className="text-[15px] font-bold mb-1" style={{ color: t.color }}>{t.name}</div>
+              <div className="text-xs text-muted leading-[1.6]">{t.desc}</div>
             </div>
           </div>
         ))}

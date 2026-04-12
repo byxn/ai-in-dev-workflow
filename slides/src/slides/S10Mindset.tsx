@@ -1,5 +1,3 @@
-import styles from './S10Mindset.module.css'
-
 const concepts = [
   {
     left: 'Prompt',
@@ -33,27 +31,26 @@ const concepts = [
 export default function S10Mindset() {
   return (
     <section>
-      <div style={{ marginBottom: 28 }}>
+      <div className="mb-7">
         <div className="slide-tag">02 · 范式变化</div>
         <h2 className="slide-title">
           你不再写代码，你在<span className="hi">训练一个工程师</span>
         </h2>
       </div>
 
-      <div className={styles.grid}>
+      <div className="flex flex-col gap-4">
         {concepts.map((c, i) => (
-          <div key={i} className="fragment" style={{
-            background: c.colorBg,
-            border: `1px solid ${c.colorBorder}`,
-            borderRadius: 12,
-            padding: '20px 24px',
-          }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 12 }}>
-              <span style={{ fontSize: 18, fontWeight: 700, color: c.color }}>{c.left}</span>
-              <span style={{ fontSize: 16, color: 'var(--muted)' }}>{c.op}</span>
-              <span style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>{c.right}</span>
+          <div
+            key={i}
+            className="fragment rounded-xl px-6 py-5 border"
+            style={{ background: c.colorBg, borderColor: c.colorBorder }}
+          >
+            <div className="flex items-baseline gap-3 mb-3">
+              <span className="text-lg font-bold" style={{ color: c.color }}>{c.left}</span>
+              <span className="text-base text-muted">{c.op}</span>
+              <span className="text-lg font-bold text-fg">{c.right}</span>
             </div>
-            <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{c.desc}</div>
+            <div className="text-[13px] text-muted leading-[1.65]">{c.desc}</div>
           </div>
         ))}
       </div>

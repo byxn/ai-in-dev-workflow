@@ -36,38 +36,27 @@ const sections = [
 export default function S02Agenda() {
   return (
     <section>
-      <div style={{ marginBottom: 32 }}>
+      <div className="mb-8">
         <div className="slide-tag">Agenda</div>
         <h2 className="slide-title">今日议程</h2>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+      <div className="grid grid-cols-2 gap-4">
         {sections.map((s, i) => (
           <div
             key={i}
-            className="fragment"
-            style={{
-              background: s.colorBg,
-              border: `1px solid ${s.colorBorder}`,
-              borderRadius: 12,
-              padding: '20px 24px',
-              display: 'flex',
-              gap: 16,
-              alignItems: 'flex-start',
-            }}
+            className="fragment flex items-start gap-4 rounded-xl px-6 py-5 border"
+            style={{ background: s.colorBg, borderColor: s.colorBorder }}
           >
-            <div style={{
-              fontSize: 36,
-              fontWeight: 900,
-              color: s.color,
-              lineHeight: 1,
-              opacity: 0.6,
-              flexShrink: 0,
-              fontVariantNumeric: 'tabular-nums',
-            }}>{s.num}</div>
+            <div
+              className="text-[36px] font-black leading-none opacity-60 shrink-0 tabular-nums"
+              style={{ color: s.color }}
+            >
+              {s.num}
+            </div>
             <div>
-              <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--text)', marginBottom: 6 }}>{s.title}</div>
-              <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{s.desc}</div>
+              <div className="text-xl font-bold text-fg mb-[6px]">{s.title}</div>
+              <div className="text-[13px] text-muted leading-[1.6]">{s.desc}</div>
             </div>
           </div>
         ))}

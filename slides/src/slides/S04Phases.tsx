@@ -51,44 +51,52 @@ export default function S04Phases() {
   return (
     <section>
       <SlideHeader tag="01 · 现状速览" title={<>AI 编程<span className="hi">四阶段</span>演进</>} />
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14 }}>
+      <div className="grid grid-cols-4 gap-[14px]">
         {phases.map((p, i) => (
-          <div key={i} className="fragment" style={{
-            background: p.dim ? 'rgba(255,255,255,0.02)' : 'var(--panel)',
-            border: `1px solid ${p.dim ? 'rgba(255,255,255,0.06)' : 'rgba(0,212,170,0.2)'}`,
-            borderRadius: 10,
-            padding: '16px 18px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 10,
-            opacity: p.dim ? 0.7 : 1,
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div
+            key={i}
+            className={`fragment flex flex-col gap-[10px] rounded-[10px] p-[16px_18px] border ${p.dim ? 'opacity-70' : ''}`}
+            style={{
+              background: p.dim ? 'rgba(255,255,255,0.02)' : 'var(--panel)',
+              borderColor: p.dim ? 'rgba(255,255,255,0.06)' : 'rgba(0,212,170,0.2)',
+            }}
+          >
+            <div className="flex justify-between items-start">
               <div>
-                <div style={{ fontSize: 22, fontWeight: 800, color: p.dim ? 'var(--muted)' : 'var(--accent)', lineHeight: 1 }}>{p.year}</div>
-                <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 3 }}>{p.tag}</div>
+                <div
+                  className="text-[22px] font-extrabold leading-none"
+                  style={{ color: p.dim ? 'var(--muted)' : 'var(--accent)' }}
+                >
+                  {p.year}
+                </div>
+                <div className="text-[11px] text-muted mt-[3px]">{p.tag}</div>
               </div>
-              <span style={{
-                fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 4,
-                color: p.badgeColor, background: p.badgeBg,
-              }}>{p.badge}</span>
+              <span
+                className="text-[10px] font-bold px-2 py-[3px] rounded"
+                style={{ color: p.badgeColor, background: p.badgeBg }}
+              >
+                {p.badge}
+              </span>
             </div>
 
-            <div style={{ borderTop: `1px solid ${p.dim ? 'rgba(255,255,255,0.05)' : 'rgba(0,212,170,0.12)'}`, paddingTop: 10 }}>
-              <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--text)', marginBottom: 6 }}>{p.title}</div>
-              <div style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6 }}>{p.desc}</div>
+            <div
+              className="border-t pt-[10px]"
+              style={{ borderColor: p.dim ? 'rgba(255,255,255,0.05)' : 'rgba(0,212,170,0.12)' }}
+            >
+              <div className="text-[15px] font-bold text-fg mb-[6px]">{p.title}</div>
+              <div className="text-xs text-muted leading-[1.6]">{p.desc}</div>
             </div>
 
-            <div style={{
-              marginTop: 'auto',
-              fontSize: 11, fontWeight: 600,
-              color: p.dim ? 'var(--muted)' : 'var(--accent)',
-              background: p.dim ? 'rgba(255,255,255,0.03)' : 'rgba(0,212,170,0.06)',
-              border: `1px solid ${p.dim ? 'rgba(255,255,255,0.06)' : 'rgba(0,212,170,0.15)'}`,
-              borderRadius: 5,
-              padding: '4px 10px',
-              textAlign: 'center',
-            }}>{p.essence}</div>
+            <div
+              className="mt-auto text-[11px] font-semibold text-center rounded-[5px] px-[10px] py-1 border"
+              style={{
+                color: p.dim ? 'var(--muted)' : 'var(--accent)',
+                background: p.dim ? 'rgba(255,255,255,0.03)' : 'rgba(0,212,170,0.06)',
+                borderColor: p.dim ? 'rgba(255,255,255,0.06)' : 'rgba(0,212,170,0.15)',
+              }}
+            >
+              {p.essence}
+            </div>
           </div>
         ))}
       </div>

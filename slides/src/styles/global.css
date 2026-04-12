@@ -1,6 +1,16 @@
 @import 'tailwindcss';
 @import './vars.css';
 
+@theme inline {
+  --color-accent:     var(--accent);
+  --color-purple:     var(--purple);
+  --color-gold:       var(--amber);
+  --color-muted:      var(--muted);
+  --color-panel:      var(--panel);
+  --color-fg:         var(--text);
+  --color-bg:         var(--bg);
+}
+
 /* ── Reset & base ─────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

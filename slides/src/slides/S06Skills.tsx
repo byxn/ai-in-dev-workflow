@@ -39,30 +39,22 @@ export default function S06Skills() {
   return (
     <section>
       <SlideHeader tag="01 · 现状速览" title={<>未来程序员需要什么<span className="hi">新能力</span></>} />
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+      <div className="grid grid-cols-2 gap-4">
         {skills.map((s, i) => (
-          <div key={i} className="fragment" style={{
-            background: s.colorBg,
-            border: `1px solid ${s.colorBorder}`,
-            borderRadius: 12,
-            padding: '18px 22px',
-            display: 'flex',
-            gap: 16,
-            alignItems: 'flex-start',
-          }}>
-            <div style={{
-              fontSize: 28,
-              fontWeight: 900,
-              color: s.color,
-              lineHeight: 1,
-              opacity: 0.5,
-              flexShrink: 0,
-              minWidth: 36,
-              fontVariantNumeric: 'tabular-nums',
-            }}>{s.num}</div>
+          <div
+            key={i}
+            className="fragment flex items-start gap-4 rounded-xl px-[22px] py-[18px] border"
+            style={{ background: s.colorBg, borderColor: s.colorBorder }}
+          >
+            <div
+              className="text-[28px] font-black leading-none opacity-50 shrink-0 min-w-9 tabular-nums"
+              style={{ color: s.color }}
+            >
+              {s.num}
+            </div>
             <div>
-              <div style={{ fontSize: 17, fontWeight: 700, color: 'var(--text)', marginBottom: 6 }}>{s.title}</div>
-              <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{s.desc}</div>
+              <div className="text-[17px] font-bold text-fg mb-[6px]">{s.title}</div>
+              <div className="text-[13px] text-muted leading-[1.65]">{s.desc}</div>
             </div>
           </div>
         ))}

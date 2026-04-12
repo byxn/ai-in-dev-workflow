@@ -46,34 +46,33 @@ export default function S14ActionPlan() {
   return (
     <section>
       <SlideHeader tag="04 · 行动计划" title={<>团队<span className="hi">行动计划</span></>} />
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18 }}>
+      <div className="grid grid-cols-3 gap-[18px]">
         {steps.map((s, i) => (
-          <div key={i} className="fragment" style={{
-            background: s.colorBg,
-            border: `1px solid ${s.colorBorder}`,
-            borderRadius: 12,
-            padding: '20px 22px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 14,
-          }}>
-            {/* header */}
+          <div
+            key={i}
+            className="fragment flex flex-col gap-[14px] rounded-xl px-[22px] py-5 border"
+            style={{ background: s.colorBg, borderColor: s.colorBorder }}
+          >
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                <span style={{ fontSize: 12, fontWeight: 700, color: s.color, letterSpacing: 1 }}>{s.step}</span>
-                <span style={{
-                  fontSize: 11, fontWeight: 600, padding: '2px 8px', borderRadius: 4,
-                  color: s.color, background: `color-mix(in srgb, ${s.color} 12%, transparent)`,
-                }}>{s.when}</span>
+              <div className="flex justify-between items-center mb-[6px]">
+                <span className="text-xs font-bold tracking-[1px]" style={{ color: s.color }}>{s.step}</span>
+                <span
+                  className="text-[11px] font-semibold px-2 py-[2px] rounded"
+                  style={{
+                    color: s.color,
+                    background: `color-mix(in srgb, ${s.color} 12%, transparent)`,
+                  }}
+                >
+                  {s.when}
+                </span>
               </div>
-              <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>{s.title}</div>
+              <div className="text-lg font-bold text-fg">{s.title}</div>
             </div>
 
-            {/* items */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div className="flex flex-col gap-2">
               {s.items.map((item, j) => (
-                <div key={j} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 13, color: 'var(--muted)', lineHeight: 1.55 }}>
-                  <span style={{ color: s.color, fontSize: 10, marginTop: 3, flexShrink: 0 }}>▸</span>
+                <div key={j} className="flex gap-2 items-start text-[13px] text-muted leading-[1.55]">
+                  <span className="text-[10px] mt-[3px] shrink-0" style={{ color: s.color }}>▸</span>
                   {item}
                 </div>
               ))}

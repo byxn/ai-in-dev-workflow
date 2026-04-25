@@ -1,15 +1,12 @@
 :root {
-  --bg: #060b14;
-  --panel: #0f1729;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #e2e8f0;
-  --muted: #64748b;
-  --accent: #00d4aa;
-  --purple: #8b5cf6;
-  --amber: #f59e0b;
-  --red: #ef4444;
-  --code-bg: #0d1117;
-
-  --font-sans: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --bg: #f5f2ec;
+  --bg-dark: #14141a;
+  --fg: #14141a;
+  --fg-invert: #f5f2ec;
+  --mute: #8a8475;
+  --mute-dark: #5a5a68;
+  --rule: #14141a;
+  --rule-soft: #d7d2c6;
+  --rule-dark: #2a2a32;
+  --accent: #d86a2c;
 }

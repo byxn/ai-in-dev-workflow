@@ -1,46 +1,47 @@
-const bullets = [
-  '写代码正在从「生产」变成「验证」',
-  '程序员正在从「执行者」变成「Agent 管理者」',
-  '未来差距不是语言 / 框架，而是驾驭 AI 的能力',
-]
-
 export default function S01Opening() {
   return (
-    <section
-      className="!items-center !justify-center text-center"
-      style={{
-        background:
-          'radial-gradient(ellipse 60% 55% at 50% 40%, rgba(0,212,170,0.06) 0%, transparent 65%), radial-gradient(ellipse 40% 30% at 80% 70%, rgba(139,92,246,0.04) 0%, transparent 60%)',
-      }}
-    >
-      <div className="flex flex-col items-center">
-        <div className="fragment mb-6 text-xs font-semibold tracking-[3px] uppercase text-muted" data-fragment-index="0">
-          技术部门全员分享 · 2026
+    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
+      {/* vertical strip left */}
+      <div className="mono" style={{
+        position: 'absolute', top: '960px', left: '80px',
+        transform: 'rotate(-90deg)', transformOrigin: 'left top',
+        fontSize: '20px', color: 'var(--mute)', letterSpacing: '6px', whiteSpace: 'nowrap',
+      }}>
+        TECH TALK · APRIL 2026 · № 01
+      </div>
+
+      {/* harness icon top right */}
+      <svg viewBox="0 0 100 100" style={{
+        position: 'absolute', top: '72px', right: '76px',
+        width: '52px', height: '52px', color: 'var(--mute)',
+      }}>
+        <g className="harness" strokeWidth="1.8">
+          <path d="M20,30 Q50,15 80,30 L78,48 Q50,62 22,48 Z" />
+          <path d="M50,62 L50,82" />
+          <path d="M30,50 L28,78" />
+          <path d="M70,50 L72,78" />
+          <circle cx="50" cy="40" r="3" />
+        </g>
+      </svg>
+
+      <div style={{ position: 'absolute', left: '180px', top: '220px', right: '120px' }}>
+        <div className="mono" style={{ fontSize: '26px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '56px' }}>— CHAPTER ZERO</div>
+        <div className="sg" style={{ fontSize: '184px', fontWeight: 500, lineHeight: 0.9, letterSpacing: '-6px' }}>
+          AI 在工作中的<br />
+          <span style={{ color: 'var(--accent)', fontWeight: 700 }}>实战</span>使用
         </div>
-
-        <h1 className="text-[88px]! font-black! leading-[0.95] tracking-[-3px] text-fg m-0!">
-          AI{' '}
-          <span className="bg-gradient-to-br from-accent to-[#00b8ff] bg-clip-text text-transparent">
-            CODING
-          </span>
-        </h1>
-
-        <p className="text-[22px] text-muted mt-4 mb-12 font-normal">
-          当写代码不再稀缺，程序员还剩什么？
-        </p>
-
-        <div className="flex flex-col items-start gap-[14px] text-left">
-          {bullets.map((b, i) => (
-            <div
-              key={i}
-              className="fragment flex items-center gap-[14px] text-[17px] text-fg bg-white/[0.03] border border-white/[0.07] rounded-lg px-5 py-3 min-w-[540px]"
-              data-fragment-index={i + 1}
-            >
-              <span className="w-[6px] h-[6px] rounded-full bg-accent shrink-0" />
-              <span>{b}</span>
-            </div>
-          ))}
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '56px', marginTop: '96px', whiteSpace: 'nowrap' }}>
+          <div className="sg" style={{ fontSize: '40px', fontWeight: 500 }}>2026 · 04</div>
+          <div style={{ fontSize: '34px', color: '#4a4a55', fontWeight: 300 }}>技术部内部分享 / 60 分钟</div>
         </div>
+      </div>
+
+      <div style={{ position: 'absolute', bottom: '140px', left: '180px', right: '120px', height: '2px', background: 'var(--rule)' }} />
+      <div style={{ position: 'absolute', bottom: '72px', left: '180px', right: '120px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+        <div style={{ fontSize: '30px', color: '#4a4a55', fontWeight: 300 }}>
+          <span style={{ color: 'var(--accent)' }}>↳</span>&nbsp; 你以为你在用最新的 AI?
+        </div>
+        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute)', letterSpacing: '2px' }}>01 / 18</div>
       </div>
     </section>
   )

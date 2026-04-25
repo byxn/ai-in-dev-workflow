@@ -1,23 +1,26 @@
 export default function S21Closing() {
   return (
-    <section className="!items-center !justify-center text-center">
-      <div className="flex flex-col items-center max-w-[660px] mx-auto">
-        <p className="text-xs text-muted tracking-[3px] uppercase mb-7">结语</p>
+    <section
+      className="!items-center !justify-center text-center"
+      style={{
+        background:
+          'radial-gradient(ellipse 55% 45% at 50% 42%, rgba(0,212,170,0.08) 0%, transparent 68%)',
+      }}
+    >
+      <div className="flex flex-col items-center max-w-[920px] mx-auto">
+       
 
-        <p className="fragment text-[27px] font-semibold leading-[1.65] text-fg mb-7">
-          未来不是「会不会写代码」，<br />
-          而是「<span className="text-accent">能不能让 AI 写出对的代码</span>」
-        </p>
+        <h2 className="fragment text-[92px]! font-black! leading-[0.95]! text-fg! m-0! mb-8! tracking-[0]">
+          感谢大家
+        </h2>
 
-        <p className="fragment text-[15px] text-muted leading-[1.9] mb-7">
-          现在开始行动，不是下一个季度。
-        </p>
+      
 
-        <p className="fragment text-[26px] font-black tracking-[1px] bg-gradient-to-br from-accent to-purple bg-clip-text text-transparent mb-6">
-          立即安装 Claude Code，今天就开始！
-        </p>
-
-        <p className="fragment text-[13px] text-muted tracking-[1px]">感谢大家 · Q&amp;A</p>
+        <div className="fragment border border-accent/25 bg-accent/[0.06] rounded-lg px-10 py-5">
+          <p className="text-[46px] font-black text-accent leading-none tracking-[0]">
+            Q&amp;A
+          </p>
+        </div>
       </div>
     </section>
   )

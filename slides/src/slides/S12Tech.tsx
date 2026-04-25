@@ -54,7 +54,7 @@ const techs = [
 export default function S12Tech() {
   return (
     <section>
-      <SlideHeader tag="03 · 最前沿技术" title={<><span className="hi">2025</span> 最前沿技术</>} />
+      <SlideHeader tag="03 · 最前沿技术" title={<><span className="hi">2026</span> 最前沿技术</>} />
       <div className="grid grid-cols-3 gap-[14px]">
         {techs.map((t, i) => (
           <div

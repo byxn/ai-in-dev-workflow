@@ -15,7 +15,7 @@ export default function S01Opening() {
     >
       <div className="flex flex-col items-center">
         <div className="fragment mb-6 text-xs font-semibold tracking-[3px] uppercase text-muted" data-fragment-index="0">
-          技术部门全员分享 · 2025
+          技术部门全员分享 · 2026
         </div>
 
         <h1 className="text-[88px]! font-black! leading-[0.95] tracking-[-3px] text-fg m-0!">

@@ -1,6 +1,8 @@
+import { HarnessIcon, SlidePage } from '../components/Slide'
+
 export default function S01Opening() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
+    <SlidePage>
       {/* vertical strip left */}
       <div className="mono" style={{
         position: 'absolute', top: '960px', left: '80px',
@@ -11,18 +13,10 @@ export default function S01Opening() {
       </div>
 
       {/* harness icon top right */}
-      <svg viewBox="0 0 100 100" style={{
+      <HarnessIcon style={{
         position: 'absolute', top: '72px', right: '76px',
         width: '52px', height: '52px', color: 'var(--mute)',
-      }}>
-        <g className="harness" strokeWidth="1.8">
-          <path d="M20,30 Q50,15 80,30 L78,48 Q50,62 22,48 Z" />
-          <path d="M50,62 L50,82" />
-          <path d="M30,50 L28,78" />
-          <path d="M70,50 L72,78" />
-          <circle cx="50" cy="40" r="3" />
-        </g>
-      </svg>
+      }} />
 
       <div style={{ position: 'absolute', left: '180px', top: '220px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '26px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '56px' }}>— CHAPTER ZERO</div>
@@ -41,8 +35,8 @@ export default function S01Opening() {
         <div style={{ fontSize: '30px', color: '#4a4a55', fontWeight: 300 }}>
           <span style={{ color: 'var(--accent)' }}>↳</span>&nbsp; 你以为你在用最新的 AI?
         </div>
-        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute)', letterSpacing: '2px' }}>01 / 18</div>
+        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute)', letterSpacing: '2px' }}>01 / 15</div>
       </div>
-    </section>
+    </SlidePage>
   )
 }

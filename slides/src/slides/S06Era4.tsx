@@ -1,11 +1,12 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 export default function S06Era4() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 05 · ERA 04</div>
-        <div className="chrome-label">06 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 05 · ERA 04</PageEyebrow>}
+        right={<ChromeLabel>06 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '24px' }}>时代 4 · 2025</div>
@@ -15,7 +16,7 @@ export default function S06Era4() {
 
       <div style={{ position: 'absolute', left: '120px', top: '480px', right: '120px' }}>
         <div className="sg" style={{ fontSize: '92px', fontWeight: 500, lineHeight: 1.15, letterSpacing: '-2px' }}>
-          "没有界面"<span style={{ color: 'var(--mute)', fontWeight: 300 }}>——</span><br />
+          “没有界面”<span style={{ color: 'var(--mute)', fontWeight: 300 }}>——</span><br />
           它就是个<span style={{ color: 'var(--accent)' }}>命令行</span>。
         </div>
         <div style={{ fontSize: '36px', color: '#4a4a55', marginTop: '40px', fontWeight: 300 }}>
@@ -33,11 +34,11 @@ export default function S06Era4() {
         </div>
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">§ 05 · Claude Code · CLI</div>
-        <div className="chrome-label">agentic</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>§ 05 · Claude Code · CLI</ChromeLabel>}
+        right={<ChromeLabel>agentic</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

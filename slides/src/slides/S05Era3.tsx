@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const timeline = [
   { date: '2023.03', event: '上线 · 只有 AI 聊天' },
   { date: '2024 中', event: 'Composer · 跨文件修改' },
@@ -14,12 +16,11 @@ const stats = [
 
 export default function S05Era3() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 04 · ERA 03</div>
-        <div className="chrome-label">05 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 04 · ERA 03</PageEyebrow>}
+        right={<ChromeLabel>05 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '24px' }}>时代 3 · 2023</div>
@@ -49,11 +50,11 @@ export default function S05Era3() {
         ))}
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">§ 04 · Cursor</div>
-        <div className="chrome-label">2023 → 2026</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>§ 04 · Cursor</ChromeLabel>}
+        right={<ChromeLabel>2023 → 2026</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

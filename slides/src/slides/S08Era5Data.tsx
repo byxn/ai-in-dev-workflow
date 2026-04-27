@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const rows = [
   { n: '01', value: '3 → 7 人',      size: 36,  accent: false },
   { n: '02', value: '5 个月',         size: 48,  accent: false },
@@ -10,12 +12,11 @@ const heights: Record<string, number> = { '01': 60, '02': 70, '03': 90, '04': 11
 
 export default function S08Era5Data() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 07 · ERA 05</div>
-        <div className="chrome-label">08 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 07 · ERA 05</PageEyebrow>}
+        right={<ChromeLabel>08 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '26px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '20px' }}>2026 年 2 月 11 日 · 官方博客</div>
@@ -40,11 +41,11 @@ export default function S08Era5Data() {
         ))}
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">openai.com/index/harness-engineering</div>
-        <div className="chrome-label">§ 07 · Harness</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>openai.com/index/harness-engineering</ChromeLabel>}
+        right={<ChromeLabel>§ 07 · Harness</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

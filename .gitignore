@@ -27,4 +27,6 @@ pnpm-debug.log*
 
 
 script
-specs.playwright-mcp/
+
+.chats
+.playwright-mcp/

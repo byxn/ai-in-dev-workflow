@@ -1,11 +1,12 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 export default function S03Era1() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 02 · ERA 01</div>
-        <div className="chrome-label">03 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 02 · ERA 01</PageEyebrow>}
+        right={<ChromeLabel>03 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '24px' }}>时代 1 · 2021</div>
@@ -22,11 +23,11 @@ export default function S03Era1() {
         </div>
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">训练数据 · 5400 万 GitHub 仓库 · 159 GB 代码</div>
-        <div className="chrome-label">§ 02 · Copilot</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>训练数据 · 5400 万 GitHub 仓库 · 159 GB 代码</ChromeLabel>}
+        right={<ChromeLabel>§ 02 · Copilot</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

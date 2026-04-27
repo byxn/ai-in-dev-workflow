@@ -8,7 +8,13 @@ html, body, #root {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+html, body {
   background: var(--bg-dark);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  color: var(--fg);
+  font-weight: 300;
 }
 
 /* ── Reveal overrides ─────────────────────────────── */
@@ -27,7 +33,6 @@ html, body, #root {
   display: block !important;
   overflow: hidden;
   box-sizing: border-box;
-  background: none !important;
   top: 0 !important;
   left: 0 !important;
 }
@@ -39,8 +44,17 @@ html, body, #root {
   color: inherit;
 }
 
-.reveal .progress { color: var(--accent); }
+.reveal .progress {
+  color: var(--accent);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: var(--accent);
+}
+
 .reveal .controls { color: var(--accent); }
+
 .reveal .slide-number {
   background: rgba(20, 20, 26, 0.7);
   color: var(--mute);
@@ -55,6 +69,35 @@ html, body, #root {
 .sg   { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; }
 .harness { stroke: currentColor; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
+.slide-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.page-title {
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 84px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.page-sub {
+  font-size: 32px;
+  color: #4a4a55;
+  font-weight: 300;
+}
+
+.dark {
+  background: var(--bg-dark);
+  color: var(--fg-invert);
+}
+
 /* ── Page chrome ──────────────────────────────────── */
 .chrome-top, .chrome-bottom {
   position: absolute; left: 120px; right: 120px;
@@ -66,10 +109,9 @@ html, body, #root {
 .rule-top    { position: absolute; top: 128px; left: 120px; right: 120px; height: 1px; background: var(--rule-soft); }
 .rule-bottom { position: absolute; bottom: 128px; left: 120px; right: 120px; height: 1px; background: var(--rule-soft); }
 
-/* dark-mode slide overrides */
-.dark-chrome .chrome-label { color: var(--mute-dark); }
-.dark-chrome .rule-top,
-.dark-chrome .rule-bottom  { background: var(--rule-dark); }
-
 /* ── Eyebrow label ────────────────────────────────── */
 .page-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 28px; color: var(--accent); letter-spacing: 4px; white-space: nowrap; }
+
+.dark .chrome-label { color: var(--mute-dark); }
+.dark .rule-top,
+.dark .rule-bottom { background: var(--rule-dark); }

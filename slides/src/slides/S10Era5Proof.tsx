@@ -1,11 +1,12 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 export default function S10Era5Proof() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 09 · ERA 05 · PROOF</div>
-        <div className="chrome-label">10 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 09 · ERA 05 · PROOF</PageEyebrow>}
+        right={<ChromeLabel>10 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="sg" style={{ fontSize: '84px', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-2px' }}>
@@ -35,11 +36,11 @@ export default function S10Era5Proof() {
         </div>
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label" style={{ color: 'var(--accent)' }}>🔑 &nbsp; 模型没变 · 只优化 Harness</div>
-        <div className="chrome-label">§ 09 · Proof</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel style={{ color: 'var(--accent)' }}>🔑 &nbsp; 模型没变 · 只优化 Harness</ChromeLabel>}
+        right={<ChromeLabel>§ 09 · Proof</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const rows = [
   { left: 'AI 模型', right: '一匹野马',          rightAccent: false },
   { left: 'Harness', right: '缰绳 + 护栏 + 仪表盘', rightAccent: true  },
@@ -6,13 +8,11 @@ const rows = [
 
 export default function S09Era5Metaphor() {
   return (
-    <section style={{ background: 'var(--bg-dark)', color: 'var(--fg-invert)' }}>
-      {/* chrome */}
-      <div style={{ position: 'absolute', top: '72px', left: '120px', right: '120px', display: 'flex', justifyContent: 'space-between' }}>
-        <div className="mono" style={{ fontSize: '28px', color: 'var(--accent)', letterSpacing: '4px' }}>§ 08 · THE REVEAL</div>
-        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute-dark)', letterSpacing: '2px' }}>09 / 18</div>
-      </div>
-      <div style={{ position: 'absolute', top: '128px', left: '120px', right: '120px', height: '1px', background: 'var(--rule-dark)' }} />
+    <SlidePage dark>
+      <TopChrome
+        left={<PageEyebrow>§ 08 · THE REVEAL</PageEyebrow>}
+        right={<ChromeLabel>09 / 15</ChromeLabel>}
+      />
 
       {/* large harness silhouette left */}
       <div style={{ position: 'absolute', left: '120px', top: '280px', width: '580px', height: '560px', opacity: 0.55 }}>
@@ -54,11 +54,11 @@ export default function S09Era5Metaphor() {
         </div>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '128px', left: '120px', right: '120px', height: '1px', background: 'var(--rule-dark)' }} />
-      <div style={{ position: 'absolute', bottom: '72px', left: '120px', right: '120px', display: 'flex', justifyContent: 'space-between' }}>
-        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute-dark)', letterSpacing: '2px' }}>§ 08 · 符号揭示</div>
-        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute-dark)', letterSpacing: '2px' }}>THE KEY METAPHOR</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>§ 08 · 符号揭示</ChromeLabel>}
+        right={<ChromeLabel>THE KEY METAPHOR</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

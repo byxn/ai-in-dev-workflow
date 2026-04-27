@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const tools = [
   { name: 'v0.dev',        desc: 'Vercel · 一句话生成 React 组件' },
   { name: 'Bolt / Lovable', desc: '一句话生成可部署应用' },
@@ -7,12 +9,11 @@ const tools = [
 
 export default function S17Also() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 15 · ALSO</div>
-        <div className="chrome-label">17 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 15 · ALSO</PageEyebrow>}
+        right={<ChromeLabel>14 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="sg" style={{ fontSize: '96px', fontWeight: 500, lineHeight: 1, letterSpacing: '-2px' }}>顺便提几个</div>
@@ -31,15 +32,15 @@ export default function S17Also() {
       {/* bottom quote */}
       <div style={{ position: 'absolute', left: '120px', bottom: '200px', right: '120px', borderTop: '2px solid var(--fg)', paddingTop: '32px' }}>
         <div style={{ fontSize: '36px', color: 'var(--fg)', fontWeight: 300, fontStyle: 'italic' }}>
-          <span style={{ color: 'var(--accent)', fontStyle: 'normal' }}>🌀</span>&nbsp; 黄仁勋:"OpenClaw 是下一个 ChatGPT。"
+          <span style={{ color: 'var(--accent)', fontStyle: 'normal' }}>🌀</span>&nbsp; 黄仁勋:“OpenClaw 是下一个 ChatGPT。”
         </div>
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">§ 15 · ALSO WORTH NOTING</div>
-        <div className="chrome-label">04 TOOLS</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>§ 15 · ALSO WORTH NOTING</ChromeLabel>}
+        right={<ChromeLabel>04 TOOLS</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

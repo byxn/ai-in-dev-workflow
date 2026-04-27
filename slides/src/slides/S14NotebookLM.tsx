@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const features = [
   { n: '01 · AUDIO',              title: 'Audio Overviews',    sub: '60 秒变播客' },
   { n: '02 · VIDEO · 2026.03',    title: 'Cinematic Overviews', sub: '资料直接变短片' },
@@ -7,12 +9,11 @@ const features = [
 
 export default function S14NotebookLM() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 12 · TOOL 01</div>
-        <div className="chrome-label">14 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 12 · TOOL 01</PageEyebrow>}
+        right={<ChromeLabel>12 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '20px' }}>TOOL 01 · Google Labs</div>
@@ -33,11 +34,11 @@ export default function S14NotebookLM() {
         ))}
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">notebooklm.google.com</div>
-        <div className="chrome-label">§ 12</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>notebooklm.google.com</ChromeLabel>}
+        right={<ChromeLabel>§ 12</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

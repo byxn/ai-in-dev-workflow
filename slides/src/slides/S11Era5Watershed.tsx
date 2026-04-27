@@ -1,12 +1,12 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 export default function S11Era5Watershed() {
   return (
-    <section style={{ background: 'var(--bg-dark)', color: 'var(--fg-invert)' }}>
-      {/* chrome */}
-      <div style={{ position: 'absolute', top: '72px', left: '120px', right: '120px', display: 'flex', justifyContent: 'space-between' }}>
-        <div className="page-eyebrow">§ 10 · ERA 05 · WATERSHED</div>
-        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute-dark)', letterSpacing: '2px' }}>11 / 18</div>
-      </div>
-      <div style={{ position: 'absolute', top: '128px', left: '120px', right: '120px', height: '1px', background: 'var(--rule-dark)' }} />
+    <SlidePage dark>
+      <TopChrome
+        left={<PageEyebrow>§ 10 · ERA 05 · WATERSHED</PageEyebrow>}
+        right={<ChromeLabel>11 / 18</ChromeLabel>}
+      />
 
       {/* harness watermark */}
       <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMin meet"
@@ -31,7 +31,7 @@ export default function S11Era5Watershed() {
           <div className="sg" style={{ fontSize: '40px', fontWeight: 500, lineHeight: 1.2 }}>Mitchell Hashimoto</div>
           <div style={{ margin: '20px 0', color: 'var(--accent)', fontSize: '36px' }}>↓</div>
           <div className="sg" style={{ fontSize: '48px', fontWeight: 500, lineHeight: 1.15, color: 'var(--accent)' }}>
-            "Harness Engineering"<br />一词诞生
+            “Harness Engineering”<br />一词诞生
           </div>
         </div>
         <div style={{ borderTop: '1px solid var(--rule-dark)', paddingTop: '32px' }}>
@@ -44,13 +44,15 @@ export default function S11Era5Watershed() {
         </div>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '128px', left: '120px', right: '120px', height: '1px', background: 'var(--rule-dark)' }} />
-      <div style={{ position: 'absolute', bottom: '72px', left: '120px', right: '120px', display: 'flex', justifyContent: 'space-between' }}>
-        <div className="chrome-label" style={{ fontSize: '22px', color: '#d4d1c8' }}>
-          <span style={{ color: 'var(--accent)' }}>🎯</span>&nbsp; AI 从"单机"进入"团队"的分水岭
-        </div>
-        <div className="chrome-label" style={{ color: 'var(--mute-dark)' }}>§ 10</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={
+          <ChromeLabel style={{ fontSize: '22px', color: '#d4d1c8' }}>
+            <span style={{ color: 'var(--accent)' }}>🎯</span>&nbsp; AI 从“单机”进入“团队”的分水岭
+          </ChromeLabel>
+        }
+        right={<ChromeLabel>§ 10</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

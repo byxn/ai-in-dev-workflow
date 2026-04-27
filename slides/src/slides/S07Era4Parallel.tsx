@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const terminals = [
   {
     id: 'agent-01',
@@ -38,12 +40,11 @@ const lineColor: Record<string, string> = {
 
 export default function S07Era4Parallel() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 06 · ERA 04 · PARALLEL</div>
-        <div className="chrome-label">07 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 06 · ERA 04 · PARALLEL</PageEyebrow>}
+        right={<ChromeLabel>07 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '24px' }}>2026 年 2 月 21 日</div>
@@ -56,12 +57,12 @@ export default function S07Era4Parallel() {
       {/* terminal windows */}
       <div style={{ position: 'absolute', left: '120px', top: '580px', right: '120px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '32px' }}>
         {terminals.map((term) => (
-          <div key={term.id} style={{ background: 'var(--bg-dark)', color: '#d8d5cc', borderRadius: '6px', overflow: 'hidden', boxShadow: '0 20px 40px -20px rgba(0,0,0,0.15)' }}>
-            <div style={{ display: 'flex', gap: '8px', padding: '14px 16px', background: '#1e1e26' }}>
-              {[0,1,2].map(i => <span key={i} style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#3a3a42', flexShrink: 0 }} />)}
-              <span className="mono" style={{ marginLeft: 'auto', fontSize: '20px', color: '#5a5a68', whiteSpace: 'nowrap' }}>{term.id}</span>
+          <div key={term.id} className="terminal-card">
+            <div className="terminal-card__header">
+              {[0, 1, 2].map((i) => <span key={i} className="terminal-card__dot" />)}
+              <span className="mono terminal-card__label">{term.id}</span>
             </div>
-            <div className="mono" style={{ padding: '24px', fontSize: '24px', lineHeight: 1.6 }}>
+            <div className="mono terminal-card__body">
               {term.lines.map((l, i) => (
                 <div key={i} style={{ color: lineColor[l.t] }}>{l.text}</div>
               ))}
@@ -70,13 +71,15 @@ export default function S07Era4Parallel() {
         ))}
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label" style={{ fontSize: '24px', color: 'var(--mute)' }}>
-          <span style={{ color: 'var(--accent)' }}>❝</span>&nbsp; Boris Cherny 日常跑 10-15 个 &nbsp;·&nbsp; incident.io 每人 4-7 个
-        </div>
-        <div className="chrome-label">§ 06 · 并行</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={
+          <ChromeLabel>
+            <span style={{ color: 'var(--accent)' }}>❝</span>&nbsp; Boris Cherny 日常跑 10-15 个 &nbsp;·&nbsp; incident.io 每人 4-7 个
+          </ChromeLabel>
+        }
+        right={<ChromeLabel>§ 06 · 并行</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

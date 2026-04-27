@@ -1,3 +1,5 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 const comparisons = [
   { name: 'Netflix',   time: '3.5 年' },
   { name: 'Facebook',  time: '10 个月' },
@@ -6,12 +8,11 @@ const comparisons = [
 
 export default function S04Era2() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 03 · ERA 02</div>
-        <div className="chrome-label">04 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 03 · ERA 02</PageEyebrow>}
+        right={<ChromeLabel>04 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '24px' }}>时代 2 · 2022</div>
@@ -43,11 +44,11 @@ export default function S04Era2() {
         </div>
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">人类历史上增长最快的消费级产品</div>
-        <div className="chrome-label">§ 03 · ChatGPT</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>人类历史上增长最快的消费级产品</ChromeLabel>}
+        right={<ChromeLabel>§ 03 · ChatGPT</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

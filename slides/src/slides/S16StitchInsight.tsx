@@ -1,11 +1,12 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 export default function S16StitchInsight() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">§ 14 · INSIGHT</div>
-        <div className="chrome-label">16 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>§ 14 · INSIGHT</PageEyebrow>}
+        right={<ChromeLabel>13 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px', bottom: '300px', display: 'grid', gridTemplateColumns: '1fr 1px 1fr', gap: '64px' }}>
         <div>
@@ -37,10 +38,10 @@ export default function S16StitchInsight() {
         </div>
       </div>
 
-      <div className="chrome-bottom">
-        <div className="chrome-label">§ 14 · INSIGHT</div>
-        <div className="chrome-label">2026 · DESIGN ⇌ CODE</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>§ 14 · INSIGHT</ChromeLabel>}
+        right={<ChromeLabel>2026 · DESIGN ⇌ CODE</ChromeLabel>}
+      />
+    </SlidePage>
   )
 }

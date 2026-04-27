@@ -1,11 +1,12 @@
+import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
+
 export default function S13Part2() {
   return (
-    <section style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
-      <div className="chrome-top">
-        <div className="page-eyebrow">PART · TWO</div>
-        <div className="chrome-label">13 / 18</div>
-      </div>
-      <div className="rule-top" />
+    <SlidePage>
+      <TopChrome
+        left={<PageEyebrow>PART · TWO</PageEyebrow>}
+        right={<ChromeLabel>11 / 15</ChromeLabel>}
+      />
 
       <div style={{ position: 'absolute', left: '180px', top: '280px', right: '120px' }}>
         <div className="sg" style={{ fontSize: '280px', fontWeight: 500, letterSpacing: '-10px', lineHeight: 0.85 }}>Part&nbsp;2</div>
@@ -17,11 +18,11 @@ export default function S13Part2() {
         </div>
       </div>
 
-      <div className="rule-bottom" />
-      <div className="chrome-bottom">
-        <div className="chrome-label">§ 11</div>
-        <div className="chrome-label">TOOLBOX · 05 TOOLS</div>
-      </div>
-    </section>
+      <BottomChrome
+        left={<ChromeLabel>§ 11</ChromeLabel>}
+        right={<ChromeLabel>TOOLBOX · 04 TOOLS</ChromeLabel>}
+        showRule
+      />
+    </SlidePage>
   )
 }

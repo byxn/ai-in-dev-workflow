@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-// @ts-ignore
 import Reveal from 'reveal.js'
 
 import 'reveal.js/dist/reveal.css'
@@ -16,11 +15,8 @@ import S07Era4Parallel   from './slides/S07Era4Parallel'
 import S08Era5Data       from './slides/S08Era5Data'
 import S09Era5Metaphor   from './slides/S09Era5Metaphor'
 import S10Era5Proof      from './slides/S10Era5Proof'
-import S11Era5Watershed  from './slides/S11Era5Watershed'
-import S12Quote1         from './slides/S12Quote1'
 import S13Part2          from './slides/S13Part2'
 import S14NotebookLM     from './slides/S14NotebookLM'
-import S15ClaudeDesign   from './slides/S15ClaudeDesign'
 import S16StitchInsight  from './slides/S16StitchInsight'
 import S17Also           from './slides/S17Also'
 import S18Closing        from './slides/S18Closing'
@@ -45,6 +41,11 @@ export default function App() {
       margin: 0.04,
     })
     revealRef.current.initialize()
+
+    return () => {
+      revealRef.current?.destroy()
+      revealRef.current = null
+    }
   }, [])
 
   return (
@@ -60,11 +61,8 @@ export default function App() {
         <S08Era5Data />
         <S09Era5Metaphor />
         <S10Era5Proof />
-        <S11Era5Watershed />
-        <S12Quote1 />
         <S13Part2 />
         <S14NotebookLM />
-        <S15ClaudeDesign />
         <S16StitchInsight />
         <S17Also />
         <S18Closing />

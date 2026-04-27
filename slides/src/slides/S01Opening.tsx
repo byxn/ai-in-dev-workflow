@@ -26,7 +26,7 @@ export default function S01Opening() {
         </div>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '56px', marginTop: '96px', whiteSpace: 'nowrap' }}>
           <div className="sg" style={{ fontSize: '40px', fontWeight: 500 }}>2026 · 04</div>
-          <div style={{ fontSize: '34px', color: '#4a4a55', fontWeight: 300 }}>技术部内部分享 / 60 分钟</div>
+          <div style={{ fontSize: '34px', color: '#4a4a55', fontWeight: 300 }}>技术部内部分享 </div>
         </div>
       </div>
 

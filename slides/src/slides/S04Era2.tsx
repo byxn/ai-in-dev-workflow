@@ -16,7 +16,7 @@ export default function S04Era2() {
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '28px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '24px' }}>时代 2 · 2022</div>
-        <div className="sg" style={{ fontSize: '88px', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-2px' }}>全民 AI 对话</div>
+        <div className="sg" style={{ fontSize: '88px', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-2px' }}>通用对话模型</div>
       </div>
 
       <div style={{ position: 'absolute', left: '120px', top: '420px', right: '120px' }}>

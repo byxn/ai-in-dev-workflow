@@ -14,7 +14,8 @@ import S06Era4           from './slides/S06Era4'
 import S07Era4Parallel   from './slides/S07Era4Parallel'
 import S08Era5Data       from './slides/S08Era5Data'
 import S09Era5Metaphor   from './slides/S09Era5Metaphor'
-import S11Part2          from './slides/S11Part2'
+import S10Panorama       from './slides/S10Panorama'
+import S11SpecDriven     from './slides/S11SpecDriven'
 import S12NotebookLM     from './slides/S12NotebookLM'
 import S13StitchInsight  from './slides/S13StitchInsight'
 import S14Also           from './slides/S14Also'
@@ -60,7 +61,8 @@ export default function App() {
         <S07Era4Parallel />
         <S08Era5Data />
         <S09Era5Metaphor />
-        <S11Part2 />
+        <S10Panorama />
+        <S11SpecDriven />
         <S12NotebookLM />
         <S13StitchInsight />
         <S14Also />

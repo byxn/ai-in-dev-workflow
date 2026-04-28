@@ -2,7 +2,6 @@ import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '..
 
 const tools = [
   { name: 'v0.dev',        desc: 'Vercel · 一句话生成 React 组件' },
-  { name: 'Bolt / Lovable', desc: '一句话生成可部署应用' },
   { name: 'Manus',         desc: 'Meta $2B 收购 · 今日华邮头条' },
   { name: 'OpenClaw',      desc: 'OpenAI 上周末刚收购' },
 ]

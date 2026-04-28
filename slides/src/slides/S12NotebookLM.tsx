@@ -7,7 +7,7 @@ const features = [
   { n: '04 · INTEGRATION · 2026.04.08', title: 'Notebooks in Gemini', sub: '集成进 Gemini' },
 ]
 
-export default function S14NotebookLM() {
+export default function S12NotebookLM() {
   return (
     <SlidePage>
       <TopChrome

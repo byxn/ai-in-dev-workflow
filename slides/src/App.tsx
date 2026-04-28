@@ -14,12 +14,12 @@ import S06Era4           from './slides/S06Era4'
 import S07Era4Parallel   from './slides/S07Era4Parallel'
 import S08Era5Data       from './slides/S08Era5Data'
 import S09Era5Metaphor   from './slides/S09Era5Metaphor'
-import S10Era5Proof      from './slides/S10Era5Proof'
-import S13Part2          from './slides/S13Part2'
-import S14NotebookLM     from './slides/S14NotebookLM'
-import S16StitchInsight  from './slides/S16StitchInsight'
-import S17Also           from './slides/S17Also'
-import S18Closing        from './slides/S18Closing'
+import S11Part2          from './slides/S11Part2'
+import S12NotebookLM     from './slides/S12NotebookLM'
+import S13StitchInsight  from './slides/S13StitchInsight'
+import S14Also           from './slides/S14Also'
+import S15HumanAiRoles   from './slides/S15HumanAiRoles'
+import S16Closing        from './slides/S16Closing'
 
 export default function App() {
   const deckRef = useRef<HTMLDivElement>(null)
@@ -60,12 +60,12 @@ export default function App() {
         <S07Era4Parallel />
         <S08Era5Data />
         <S09Era5Metaphor />
-        <S10Era5Proof />
-        <S13Part2 />
-        <S14NotebookLM />
-        <S16StitchInsight />
-        <S17Also />
-        <S18Closing />
+        <S11Part2 />
+        <S12NotebookLM />
+        <S13StitchInsight />
+        <S14Also />
+        <S15HumanAiRoles />
+        <S16Closing />
       </div>
     </div>
   )

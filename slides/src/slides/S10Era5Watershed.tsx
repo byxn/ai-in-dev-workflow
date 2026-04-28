@@ -1,6 +1,6 @@
 import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
 
-export default function S11Era5Watershed() {
+export default function S10Era5Watershed() {
   return (
     <SlidePage dark>
       <TopChrome

@@ -1,6 +1,6 @@
 import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
 
-export default function S13Part2() {
+export default function S11Part2() {
   return (
     <SlidePage>
       <TopChrome

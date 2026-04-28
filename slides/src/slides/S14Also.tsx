@@ -7,12 +7,12 @@ const tools = [
   { name: 'OpenClaw',      desc: 'OpenAI 上周末刚收购' },
 ]
 
-export default function S17Also() {
+export default function S14Also() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 15 · ALSO</PageEyebrow>}
-        right={<ChromeLabel>14 / 15</ChromeLabel>}
+        right={<ChromeLabel>14 / 16</ChromeLabel>}
       />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>

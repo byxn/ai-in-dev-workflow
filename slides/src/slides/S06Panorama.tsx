@@ -50,7 +50,7 @@ const ROWS: Row[] = [
   },
 ]
 
-export default function S05Panorama() {
+export default function S06Panorama() {
   return (
     <SlidePage>
       <TopChrome

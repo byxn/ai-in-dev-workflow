@@ -8,7 +8,7 @@ const modes = [
   { label: '完全 AI', tone: 'var(--mute)' },
 ]
 
-export default function S10HumanAiRoles() {
+export default function S08HumanAiRoles() {
   return (
     <SlidePage>
       <TopChrome

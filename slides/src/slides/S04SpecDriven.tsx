@@ -7,7 +7,7 @@ const flow = [
   { n: '04', stage: 'REVIEW', actor: '回到规约',   note: '不改代码 · 改规约重生',     accent: false },
 ]
 
-export default function S06SpecDriven() {
+export default function S04SpecDriven() {
   return (
     <SlidePage>
       <TopChrome

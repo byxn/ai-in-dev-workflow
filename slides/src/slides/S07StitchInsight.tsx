@@ -1,6 +1,6 @@
 import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
 
-export default function S08StitchInsight() {
+export default function S07StitchInsight() {
   return (
     <SlidePage>
       <TopChrome

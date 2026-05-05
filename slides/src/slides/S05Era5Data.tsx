@@ -10,7 +10,7 @@ const rows = [
 
 const heights: Record<string, number> = { '01': 60, '02': 70, '03': 90, '04': 110, '05': 160 }
 
-export default function S04Era5Data() {
+export default function S05Era5Data() {
   return (
     <SlidePage>
       <TopChrome

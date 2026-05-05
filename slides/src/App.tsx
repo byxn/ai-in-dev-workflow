@@ -8,13 +8,12 @@ import "./styles/components.css";
 import S01Opening      from "./slides/S01Opening";
 import S02Eras         from "./slides/S02Eras";
 import S03Era4Parallel from "./slides/S03Era4Parallel";
-import S04Era5Data     from "./slides/S04Era5Data";
-import S06SpecDriven   from "./slides/S06SpecDriven";
-import S05Panorama     from "./slides/S05Panorama";
-import S07NotebookLM   from "./slides/S07NotebookLM";
-import S08StitchInsight from "./slides/S08StitchInsight";
-import S10HumanAiRoles from "./slides/S10HumanAiRoles";
-import S11Closing      from "./slides/S11Closing";
+import S04SpecDriven   from "./slides/S04SpecDriven";
+import S05Era5Data     from "./slides/S05Era5Data";
+import S06Panorama     from "./slides/S06Panorama";
+import S07StitchInsight from "./slides/S07StitchInsight";
+import S08HumanAiRoles from "./slides/S08HumanAiRoles";
+import S09Closing      from "./slides/S09Closing";
 
 export default function App() {
   const deckRef = useRef<HTMLDivElement>(null);
@@ -49,13 +48,12 @@ export default function App() {
         <S01Opening />
         <S02Eras />
         <S03Era4Parallel />
-        <S04Era5Data />
-        <S06SpecDriven />
-        <S05Panorama />
-        <S07NotebookLM />
-        <S08StitchInsight />
-        <S10HumanAiRoles />
-        <S11Closing />
+        <S04SpecDriven />
+        <S05Era5Data />
+        <S06Panorama />
+        <S07StitchInsight />
+        <S08HumanAiRoles />
+        <S09Closing />
       </div>
     </div>
   );

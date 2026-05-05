@@ -36,9 +36,9 @@ export default function S01Opening() {
           § CHAPTER ZERO
         </div>
         <div className="sg" style={{ fontSize: '184px', fontWeight: 500, lineHeight: 0.9, letterSpacing: '-6px' }}>
-          重新认识 AI 的
+          AI 比你想的
           <br />
-          <span style={{ color: 'var(--accent)', fontWeight: 700 }}>真正威力</span>
+          <span style={{ color: 'var(--accent)', fontWeight: 700 }}>更强大</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '56px', marginTop: '96px', whiteSpace: 'nowrap' }}>
           <div className="sg" style={{ fontSize: '40px', fontWeight: 500 }}>2026 · 04</div>
@@ -59,7 +59,7 @@ export default function S01Opening() {
         }}
       >
         <div style={{ fontSize: '30px', color: '#4a4a55', fontWeight: 300 }}>
-          <span style={{ color: 'var(--accent)' }}>→</span>&nbsp; AI 到底有多强？
+          <span style={{ color: 'var(--accent)' }}>→</span>&nbsp; AI 强到什么程度？
         </div>
         <div className="mono" style={{ fontSize: '24px', color: 'var(--mute)', letterSpacing: '2px' }}>
           01 / 13

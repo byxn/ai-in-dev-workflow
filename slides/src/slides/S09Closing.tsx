@@ -1,6 +1,6 @@
 import {ChromeLabel, SlidePage, TopChrome } from '../components/Slide'
 
-export default function S11Closing() {
+export default function S09Closing() {
   return (
     <SlidePage>
       <TopChrome

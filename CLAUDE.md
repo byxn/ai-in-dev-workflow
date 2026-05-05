@@ -26,6 +26,6 @@ There is no test suite. `npm run build` and `npm run lint` are the required chec
 
 Each slide is a React component in `slides/src/slides/` named `SxxName.tsx` (numeric prefix controls ordering). Each component returns one or more `<section>` elements, which Reveal.js treats as slides (nested `<section>` = vertical sub-slides).
 
-Styling uses Tailwind CSS v4 utility classes alongside two global CSS files (`styles/global.css`, `styles/components.css`) and the Reveal.js `black` theme. Reuse existing patterns before adding new styles.
+Styling uses Tailwind CSS v4 utility classes alongside two global CSS files (`styles/global.css`, `styles/components.css`) 
 
-Supporting material (speaker notes, specs) lives in `script/` and `specs/` at the repo root — these are not part of the built app.
+

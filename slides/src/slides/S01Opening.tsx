@@ -33,9 +33,9 @@ export default function S01Opening() {
       <div style={{ position: 'absolute', bottom: '140px', left: '180px', right: '120px', height: '2px', background: 'var(--rule)' }} />
       <div style={{ position: 'absolute', bottom: '72px', left: '180px', right: '120px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
         <div style={{ fontSize: '30px', color: '#4a4a55', fontWeight: 300 }}>
-          <span style={{ color: 'var(--accent)' }}>↳</span>&nbsp; 你以为你在用最新的 AI?
+          <span style={{ color: 'var(--accent)' }}>↳</span>&nbsp; AI是什么?
         </div>
-        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute)', letterSpacing: '2px' }}>01 / 15</div>
+        <div className="mono" style={{ fontSize: '24px', color: 'var(--mute)', letterSpacing: '2px' }}>01 / 13</div>
       </div>
     </SlidePage>
   )

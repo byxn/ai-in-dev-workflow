@@ -50,12 +50,12 @@ const ROWS: Row[] = [
   },
 ]
 
-export default function S10Panorama() {
+export default function S05Panorama() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 10 · PANORAMA</PageEyebrow>}
-        right={<ChromeLabel>10 / 16</ChromeLabel>}
+        right={<ChromeLabel>07 / 13</ChromeLabel>}
       />
 
       {/* Title */}

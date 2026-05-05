@@ -1,11 +1,11 @@
 import {ChromeLabel, SlidePage, TopChrome } from '../components/Slide'
 
-export default function S16Closing() {
+export default function S11Closing() {
   return (
     <SlidePage>
       <TopChrome
         left={<ChromeLabel>— CLOSING</ChromeLabel>}
-        right={<ChromeLabel>16 / 16</ChromeLabel>}
+        right={<ChromeLabel>13 / 13</ChromeLabel>}
         showRule={false}
       />
 

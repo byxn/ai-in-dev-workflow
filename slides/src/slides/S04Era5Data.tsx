@@ -10,17 +10,17 @@ const rows = [
 
 const heights: Record<string, number> = { '01': 60, '02': 70, '03': 90, '04': 110, '05': 160 }
 
-export default function S08Era5Data() {
+export default function S04Era5Data() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 07 · ERA 05</PageEyebrow>}
-        right={<ChromeLabel>08 / 15</ChromeLabel>}
+        right={<ChromeLabel>04 / 13</ChromeLabel>}
       />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>
         <div className="mono" style={{ fontSize: '26px', color: 'var(--mute)', letterSpacing: '3px', marginBottom: '20px' }}>2026 年 2 月 11 日 · 官方博客</div>
-        <div style={{ fontSize: '32px', color: '#4a4a55', fontStyle: 'italic', fontWeight: 300, maxWidth: '1400px' }}>
+        <div style={{ fontSize: '32px', color: 'var(--mute)', fontStyle: 'italic', fontWeight: 300, maxWidth: '1400px' }}>
           《Harness Engineering: Leveraging Agents in an Agent-First World》
         </div>
       </div>

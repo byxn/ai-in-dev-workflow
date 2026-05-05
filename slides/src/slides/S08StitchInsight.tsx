@@ -1,11 +1,11 @@
 import { BottomChrome, ChromeLabel, PageEyebrow, SlidePage, TopChrome } from '../components/Slide'
 
-export default function S13StitchInsight() {
+export default function S08StitchInsight() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 14 · INSIGHT</PageEyebrow>}
-        right={<ChromeLabel>13 / 15</ChromeLabel>}
+        right={<ChromeLabel>10 / 13</ChromeLabel>}
       />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px', bottom: '300px', display: 'grid', gridTemplateColumns: '1fr 1px 1fr', gap: '64px' }}>

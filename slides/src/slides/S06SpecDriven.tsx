@@ -7,12 +7,12 @@ const flow = [
   { n: '04', stage: 'REVIEW', actor: '回到规约',   note: '不改代码 · 改规约重生',     accent: false },
 ]
 
-export default function S11SpecDriven() {
+export default function S06SpecDriven() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 10 · METHOD</PageEyebrow>}
-        right={<ChromeLabel>11 / 15</ChromeLabel>}
+        right={<ChromeLabel>08 / 13</ChromeLabel>}
       />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>

@@ -7,12 +7,12 @@ const features = [
   { n: '04 · INTEGRATION · 2026.04.08', title: 'Notebooks in Gemini', sub: '集成进 Gemini' },
 ]
 
-export default function S12NotebookLM() {
+export default function S07NotebookLM() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 12 · TOOL 01</PageEyebrow>}
-        right={<ChromeLabel>12 / 15</ChromeLabel>}
+        right={<ChromeLabel>09 / 13</ChromeLabel>}
       />
 
       <div style={{ position: 'absolute', left: '120px', top: '200px', right: '120px' }}>

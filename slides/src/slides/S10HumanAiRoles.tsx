@@ -8,12 +8,12 @@ const modes = [
   { label: '完全 AI', tone: 'var(--mute)' },
 ]
 
-export default function S15HumanAiRoles() {
+export default function S10HumanAiRoles() {
   return (
     <SlidePage>
       <TopChrome
         left={<PageEyebrow>§ 16 · DISCUSS</PageEyebrow>}
-        right={<ChromeLabel>15 / 16</ChromeLabel>}
+        right={<ChromeLabel>12 / 13</ChromeLabel>}
       />
 
       {/* Question */}
